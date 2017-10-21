@@ -44,8 +44,8 @@ random) number and prints it. To do that, create a "Controller class" and a
 "controller" method inside of it that will be executed when someone goes to
 ``/lucky/number``::
 
-    // src/AppBundle/Controller/LuckyController.php
-    namespace AppBundle\Controller;
+    // src/Controller/LuckyController.php
+    namespace App\Controller;
 
     use Symfony\Component\HttpFoundation\Response;
     use Symfony\Component\Routing\Annotation\Route;
@@ -102,7 +102,7 @@ easy, powerful and actually quite fun.
 First, make sure that ``LuckyController`` extends Symfony's base
 :class:`Symfony\\Bundle\\FrameworkBundle\\Controller\\Controller` class::
 
-    // src/AppBundle/Controller/LuckyController.php
+    // src/Controller/LuckyController.php
 
     // ...
     // --> add this new use statement
@@ -116,7 +116,7 @@ First, make sure that ``LuckyController`` extends Symfony's base
 Now, use the handy ``render()`` function to render a template. Pass it our ``number``
 variable so we can render that::
 
-    // src/AppBundle/Controller/LuckyController.php
+    // src/Controller/LuckyController.php
 
     // ...
     class LuckyController extends Controller
